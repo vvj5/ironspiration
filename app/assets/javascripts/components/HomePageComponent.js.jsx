@@ -11,6 +11,7 @@ var HomePageComponent = React.createClass({
 					<a href='#project-form'>Add Project</a>
 					<a href='#pitch-page'>Pitches</a>
 				</div>
+				<ImageListComponent />
 			</div>
 		);
 	}
