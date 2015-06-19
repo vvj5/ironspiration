@@ -45,5 +45,5 @@ ActiveRecord::Schema.define(version: 20150619014438) do
     t.datetime "updated_at",      null: false
   end
 
-  add_foreign_key "comments", "users"
+  # add_foreign_key "comments", "users"
 end

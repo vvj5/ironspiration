@@ -14,6 +14,11 @@ class ProjectsController < ApplicationController
     render json: Project.where(id: params.fetch(:id))
   end
 
+  def most_recent
+    messages = Message.all
+    render json: messages.where(created_at: time_span).group(:username, :id)
+  end
+
   # GET /projects/new
   def new
     @project = Project.new
