@@ -11,8 +11,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-    @project = Project.find_by(email: params[:email])
-    render json: @project
+    render json: Project.where(id: params.fetch(:id))
   end
 
   # GET /projects/new

@@ -11,8 +11,7 @@ class CommentsController < ApplicationController
   # GET /comments/1
   # GET /comments/1.json
   def show
-    @comment = Comment.new
-    render json: @comment
+    render json: Comment.where(id: params.fetch(:id))
   end
 
   # GET /comments/new
