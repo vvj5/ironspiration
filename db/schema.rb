@@ -11,11 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 0) do
+=======
 ActiveRecord::Schema.define(version: 20150619014438) do
+>>>>>>> 8fe134f1c118cc99df6f834beaa44fffd6e84f0e
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
+=======
   create_table "comments", force: :cascade do |t|
     t.string   "body"
     t.integer  "user_id"
@@ -46,4 +52,5 @@ ActiveRecord::Schema.define(version: 20150619014438) do
   end
 
   add_foreign_key "comments", "users"
+>>>>>>> 8fe134f1c118cc99df6f834beaa44fffd6e84f0e
 end
