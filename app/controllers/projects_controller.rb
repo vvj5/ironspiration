@@ -4,17 +4,21 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @project = Project.all
+    render json: @project
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @project = Project.find_by(email: params[:email])
+    render json: @project
   end
 
   # GET /projects/new
   def new
     @project = Project.new
+    render json: @project
   end
 
   # GET /projects/1/edit

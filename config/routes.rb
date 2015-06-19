@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :comments
   resources :users
   resources :projects
-  root 'application#index'
+  root 'projects#index'
 end
 
 
@@ -18,6 +18,7 @@ end
 #              PATCH  /comments/:id(.:format)      comments#update
 #              PUT    /comments/:id(.:format)      comments#update
 #              DELETE /comments/:id(.:format)      comments#destroy
+
 #        users GET    /users(.:format)             users#index
 #              POST   /users(.:format)             users#create
 #     new_user GET    /users/new(.:format)         users#new
@@ -26,6 +27,7 @@ end
 #              PATCH  /users/:id(.:format)         users#update
 #              PUT    /users/:id(.:format)         users#update
 #              DELETE /users/:id(.:format)         users#destroy
+
 #     projects GET    /projects(.:format)          projects#index
 #              POST   /projects(.:format)          projects#create
 #  new_project GET    /projects/new(.:format)      projects#new

@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'puma'
 gem 'react-rails'
+gem 'faker', '~>1.4.3'
 
 
 group :development, :test do
