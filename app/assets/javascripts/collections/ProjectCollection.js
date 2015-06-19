@@ -1,3 +1,4 @@
 var ProjectCollection = Backbone.Collection.extend({
-    model: ProjectModel
+    model: ProjectModel,
+    url: ''
 });

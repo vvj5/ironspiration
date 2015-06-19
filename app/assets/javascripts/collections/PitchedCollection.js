@@ -1,3 +1,4 @@
 var PitchedCollection = Backbone.Collection.extend({
-    model: PitchedModel
+    model: PitchedModel,
+    url: ''
 });
