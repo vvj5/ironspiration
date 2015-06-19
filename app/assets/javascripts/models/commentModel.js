@@ -6,7 +6,7 @@ var CommentModel = Backbone.Model.extend({
         createdAt: null,
         project_id: null
     },
-    urlRoot: '',
+    urlRoot: 'http://ironspiration.herokuapp.com/',
     idAttribute: '_id'
 
     // validate: function(attr) {

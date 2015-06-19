@@ -1,4 +1,4 @@
 var PitchedCollection = Backbone.Collection.extend({
     model: PitchedModel,
-    url: ''
+    url: 'http://ironspiration.herokuapp.com/'
 });

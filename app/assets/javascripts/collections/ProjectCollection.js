@@ -1,4 +1,4 @@
 var ProjectCollection = Backbone.Collection.extend({
     model: ProjectModel,
-    url: ''
+    url: 'http://ironspiration.herokuapp.com/'
 });

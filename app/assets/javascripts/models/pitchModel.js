@@ -5,7 +5,7 @@ var PitchedModel = Backbone.Model.extend({
         body: '',
         createdAt: null,
     },
-    urlRoot: '',
+    urlRoot: 'http://ironspiration.herokuapp.com/',
     idAttribute: '_id'
 
     // validate: function(attr) {
