@@ -1,4 +1,5 @@
 var OverallProjectPageComponent = React.createClass({
+<<<<<<< HEAD
 	render: function () {
 		return (
 			<div>
@@ -14,4 +15,15 @@ var OverallProjectPageComponent = React.createClass({
 			</div>
 		);
 	}
+=======
+    render: function () {
+        return (
+          <div>
+            <a href='#home'>home</a>
+            <ImageAndTitleComponent />
+            <ProjectDescriptionComponent/>
+          </div>
+        );
+    }
+>>>>>>> eb274930021ddf093fc5417b07d222c3fef6f2cd
 });

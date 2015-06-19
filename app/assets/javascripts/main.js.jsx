@@ -36,11 +36,19 @@ var App = Backbone.Router.extend({
         document.querySelector('#container'));
     },
     projectPage: function() {
-        React.render(<OverallProjectPageComponent/>,
+        React.render(
+        <div>
+            <h1> Individual Project Page </h1>
+            <OverallProjectPageComponent/>
+        </div>,
         document.querySelector('#container'));
     },
     pitchPage: function() {
-        React.render(<OverallPitchPageComponent/>,
+        React.render(
+        <div>
+            <h1> Pitch Page </h1>
+           <OverallPitchPageComponent/>
+        </div>,
         document.querySelector('#container'));
     },
     success: function() {
@@ -53,6 +61,6 @@ var App = Backbone.Router.extend({
     }
 });
 
-var app = new App();
+var myRouter = new App();
 Backbone.history.start();
 // app.navigate('edit');
