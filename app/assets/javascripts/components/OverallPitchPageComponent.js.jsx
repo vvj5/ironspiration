@@ -11,6 +11,7 @@ var OverallPitchPageComponent = React.createClass({
 					<a href='#pitch-form'>Add Pitch</a>
 					<a href='#home'>Projects List</a>
 				</div>
+				<PitchListComponent />
 			</div>
 		);
 	}
