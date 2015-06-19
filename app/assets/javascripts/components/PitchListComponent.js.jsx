@@ -2,8 +2,8 @@ var OverallPitchPageComponent = React.createClass({
     render: function () {
         return (
           <div>
-            <a href='#home'>home</a>
-            <PitchListComponent />
+            <h1> Pitch Title </h1>
+            <div>Pitch Content</div>
           </div>
         );
     }

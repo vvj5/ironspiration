@@ -1,4 +1,4 @@
 var UserCollection = Backbone.Collection.extend({
     model: UserModel,
-    url: ''
+    url: 'http://ironspiration.herokuapp.com/users'
 });
