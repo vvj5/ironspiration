@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'reset';
+@import 'colors';
+
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+.container {
+	max-width: 100%;
+	background-color: $ltgrey;
+}
+
+img {
+	max-width: 100%;
+}
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+h1 {
+	font-family: "museo-slab",serif;
+	font-style: normal;
+	font-weight: 700;
+	color: $dkblue;
+}
+
+li {
+  font-family: "lato",sans-serif;
+  color: $dkgrey;
+  font-size: 0.875rem;
+  display: inline;
+}
+
+h3, .login-button, .button {
+  font-family: "lato",sans-serif;
+  color: $dkblue;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+a {
+	text-decoration: none;
+	font-color: $dkgrey;
+}
+
+	/*
+  ========================================
+  Clear Fix
+  ========================================
+*/
+
+.clear-fix {
+	clear: both;}
+
+/*
+  ========================================
+  Header
+  ========================================
+*/
+
+header {
+	max-width: 100%;
+	height: 100px;
+	background-color: $ltblue;
+		.logo {
+			display: block;
+			text-align: center;
+			img {
+				margin-top: 35px;
+				overflow: hidden;}
+		}
+}
+
+nav {
+	margin-top: 50px;
+	text-align: center;
+	font-color: $dkgrey;}
+
+	/*
+  ========================================
+  Home
+  ========================================
+*/
+
+.screenshot {
+	margin-top: 30px;
+	h3 {
+		margin-left: 20px;
+		margin-bottom: 2px;}
+}
+
+/*
+  ========================================
+  Login
+  ========================================
+*/
+
+.grey-rectangle {
+	max-width: 80%;
+	height: 400px;
+	background-color: $dkgrey;
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 60px;
+	padding-top: 30px;
+	input {
+		background-color: $ltgrey;
+		border-radius: 5px;
+	  	border: solid 3px $ltblue;
+	  	text-align: center;
+	  	padding: 5px;
+	  	display: block;
+	  	margin: 20px auto;
+	}
+	.button {
+		background-color: $ltgrey;
+		height: 80px;
+		width: 80px;
+		border-radius: 50%;
+		text-align: center;
+		float: left;
+		margin: 10px;
+	}
+}
+
