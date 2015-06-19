@@ -1,12 +1,9 @@
-// var Backbone = require('backbone');
-// Backbone.$ = require('jquery');
-
-var userModel = Backbone.Model.extend({
+var UserModel = Backbone.Model.extend({
     defaults: {
         _id: null,
         username: null,
         password: '',
-        createdAt: null,
+        created_at: null,
     },
     urlRoot: '',
     idAttribute: '_id'
