@@ -1,4 +1,7 @@
 /* global Backbone React */
+var ProjectList = new ProjectCollection();
+ProjectList.fetch();
+console.log(ProjectList.length);
 var App = Backbone.Router.extend({
 	routes: {
 		'': 'home',

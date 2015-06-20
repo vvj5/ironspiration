@@ -26,10 +26,9 @@ class UsersController < ApplicationController
 
   # POST /users
   # POST /users.json
-
    def create
     begin
-      user = User.create(name: params.fetch(:name), email: params.fetch(:email), password: params.fetch(:password), password_confirmation: params[:password_confirmation])
+      user = User.create(name: params.fetch(:name), email: params.fetch(:email), password: params.fetch(:password), password_confirmation: params(:password_confirmation))
       render json: user
     rescue ActionController::ParameterMissing => error
       render json: { error: error.message }, status: 422
@@ -66,5 +65,21 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
+<<<<<<< HEAD
+   # def user_params
+   #    params.require(:user).permit(:name, :password, :password_confirmation)
+   # end
+=======
+<<<<<<< HEAD
+    def user_params
+      params.require(:user).permit(:name, :password, :password_confirmation)
+    end
+
+=======
+   # def user_params
+   #    params.require(:user).permit(:name, :password, :password_confirmation)
+   # end
+>>>>>>> f43f624908c537f7f5072f96d791d21f25231bda
+>>>>>>> 3cc8d02c1f29c06e58684476ad215414f9ca2511
 
 end
