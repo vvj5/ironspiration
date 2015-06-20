@@ -21,7 +21,7 @@ var SuccessPageComponent = React.createClass({
 				</nav>
 
 				<section className="success">
-					<img src="images/check.png">
+					<img src="images/check.png" />
 					<p>SUCCESSFULLY SUBMITTED!</p>
 				</section>
 			</div>

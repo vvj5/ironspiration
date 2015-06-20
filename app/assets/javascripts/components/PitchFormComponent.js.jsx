@@ -22,10 +22,10 @@ var PitchFormComponent = React.createClass({
 
 				<section>
 					<div className="grey-rectangle">
-						<input type="text" name="PROJECT-TITLE" placeholder="PROJECT TITLE">
-						<input type="text" name="DETAILS" placeholder="DETAILS">
-						<input type="text" name="YEAR-CREATED" placeholder="YEAR CREATED">
-						<input type="text" name="LOCATION" placeholder="LOCATION">
+						<input type="text" name="PROJECT-TITLE" placeholder="PROJECT TITLE" />
+						<input type="text" name="DETAILS" placeholder="DETAILS" />
+						<input type="text" name="YEAR-CREATED" placeholder="YEAR CREATED" />
+						<input type="text" name="LOCATION" placeholder="LOCATION" />
 
 						
 						<div className="buttons">

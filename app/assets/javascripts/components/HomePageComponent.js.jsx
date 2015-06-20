@@ -1,9 +1,9 @@
 var HomePageComponent = React.createClass({
 	render: function () {
 		return (
-		<div class="container">
+		<div className="container">
 			<header>
-				<div class="logo">
+				<div className="logo">
 					<a href="#home"><img src="http://imgur.com/lCTMp9r"/></a>
 				</div>
 			</header>

@@ -57,7 +57,8 @@ var OverallPitchPageComponent = React.createClass({
 						<p>A brief description of the pitch goes here.</p>
 					</div>
 				</section>
-			</div>		
+			</div>	
+		);	
     }
 });
 
