@@ -47,16 +47,18 @@ var ProjectFormComponent = React.createClass({
     },
 
     addProject: function() {
+    	var yearToNumber = parseInt(this.refs.yearCreated.getDOMNode().value)
     	var project = new ProjectModel({
 	        user_id: null,
-	        image_url: this.refs.imageUrl.getDOMNode().value,
+	        image_link: this.refs.imageUrl.getDOMNode().value,
 	        title: this.refs.projectTitle.getDOMNode().value,
 	        body: this.refs.details.getDOMNode().value,
 	        location: this.refs.projectLocation.getDOMNode().value,
-	        year: this.refs.yearCreated.getDOMNode().value,
+	        year: yearToNumber,
 	        project_url: this.refs.projectUrl.getDOMNode().value,
 	        likes: 0
     	});
+    	console.log(project);
     	project.save();
     	ProjectList.add(project);
     }
