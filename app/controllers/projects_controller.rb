@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @project = Project.all
-    render json: @project
+    render json: @project.order(:created_at).reverse
   end
 
   # GET /projects/1
@@ -14,9 +14,11 @@ class ProjectsController < ApplicationController
     render json: Project.where(id: params.fetch(:id))
   end
 
-  def most_recent
-    messages = Message.all
-    render json: messages.where(created_at: time_span).group(:username, :id)
+# GET /projects/
+  def pitches
+    @project = Project.all
+    render json: @project.where(:)
+    order(:created_at).reverse
   end
 
   # GET /projects/new
