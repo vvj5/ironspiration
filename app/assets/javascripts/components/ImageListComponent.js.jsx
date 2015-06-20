@@ -1,5 +1,6 @@
 var ImageListComponent = React.createClass({
 	render: function () {
+		console.log(ProjectList);
 		return (
 			<div>
 				<div className="container">
