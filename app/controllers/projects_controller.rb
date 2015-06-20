@@ -49,7 +49,7 @@ class ProjectsController < ApplicationController
 
     def create
     # begin
-      project = Project.create(type: params.fetch(:type), title: params.fetch(:title), body: params.fetch(:body), location: params.fetch(:location), image_link: params.fetch(:image_link), project_url: params.fetch(:project_url), year: params.fetch(:year), likes: params.fetch(:likes))
+      project = Project.create(title: params.fetch(:title), body: params.fetch(:body), location: params.fetch(:location), image_link: params.fetch(:image_link), project_url: params.fetch(:project_url), year: params.fetch(:year), likes: params.fetch(:likes))
       render json: project
     # rescue ActionController::ParameterMissing => error
     #   render json: { error: error.message }, status: 422

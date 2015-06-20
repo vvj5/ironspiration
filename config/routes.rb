@@ -7,10 +7,7 @@ end
 
 
 
-
-# routes
-#       Prefix Verb   URI Pattern                  Controller#Action
-#     comments GET    /comments(.:format)          comments#index
+#   comments GET    /comments(.:format)          comments#index
 #              POST   /comments(.:format)          comments#create
 #  new_comment GET    /comments/new(.:format)      comments#new
 # edit_comment GET    /comments/:id/edit(.:format) comments#edit
