@@ -1,4 +1,3 @@
-var ProjectList = new ProjectCollection();
 var ProjectFormComponent = React.createClass({
     render: function () {
         return (
@@ -58,8 +57,8 @@ var ProjectFormComponent = React.createClass({
 	        project_url: this.refs.projectUrl.getDOMNode().value,
 	        likes: 0
     	});
-    	console.log(project);
     	project.save();
     	ProjectList.add(project);
+    	// console.log(ProjectList);
     }
 });
