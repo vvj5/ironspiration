@@ -33,20 +33,6 @@ class ProjectsController < ApplicationController
 
   # POST /projects
   # POST /projects.json
-  # def create
-  #   @project = Project.create(project_params)
-
-  #   respond_to do |format|
-  #     if @project.save
-  #       format.html { redirect_to @project, notice: 'Project was successfully created.' }
-  #       format.json { render :show, status: :created, location: @project }
-  #     else
-  #       format.html { render :new }
-  #       format.json { render json: @project.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
     def create
     # begin
       project = Project.create(title: params.fetch(:title), body: params.fetch(:body), location: params.fetch(:location), image_link: params.fetch(:image_link), project_url: params.fetch(:project_url), year: params.fetch(:year), likes: params.fetch(:likes))
@@ -87,6 +73,7 @@ class ProjectsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+
     # def project_params
     #   params.require(:project).permit(:title, :body, :location, :image_link, :project_url, :year, :likes)
     # end
