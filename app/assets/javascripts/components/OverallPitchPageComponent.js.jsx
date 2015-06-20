@@ -2,28 +2,28 @@ var OverallPitchPageComponent = React.createClass({
 	render: function () {
 		return (
 			<div>
-				<h1> Pitch Description Page </h1>
-				<a href='#home'>home</a>
-				<div>
-					<a href='#login'>Login</a>
-				</div>
-				<div>
-					<a href='#pitch-form'>Add Pitch</a>
-					<a href='#home'>Projects List</a>
-				</div>
+				<header>
+					<div className="logo">
+						<a href="#home"><img src="images/logo.png"/></a>
+					</div>
+				</header>
+
+				<nav>
+					<ul>
+						<li>
+							<a className="login-link" href="#login">LOGIN</a> | 
+						</li>
+						<li>
+							<a href="#pitch-form">SUBMIT</a> | 
+						</li>
+						<li>
+							<a href="#pitch-page"><span>PITCHES</span></a>
+						</li>
+					</ul>
+				</nav>
 				<PitchListComponent />
 			</div>
 		);
 	}
 });
 
-<nav>
-	<ul>
-		<li>
-			<a class href="submit-pitch.html">SUBMIT</a> | 
-		</li>
-		<li>
-			<a href="#"><span>PITCHES</span></a>
-		</li>
-	</ul>
-</nav>

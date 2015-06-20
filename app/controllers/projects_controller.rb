@@ -17,8 +17,8 @@ class ProjectsController < ApplicationController
 # GET /projects/
   def pitches
     @project = Project.all
-    render json: @project.where(:)
-    order(:created_at).reverse
+    render json: @project.where(type: 'pitch')
+    # order(:created_at).reverse
   end
 
   # GET /projects/new
