@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :comments
   has_secure_password
-  validates :name, presence: { message: "Please kindly enter a name for us?" }
+  validates :name, :password, :password_confirmation, presence: { message: "We need a name and a valid password, if you please?" }
 end
+

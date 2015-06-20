@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
    def create
     begin
-      user = User.create(name: params.fetch(:name), email: params.fetch(:email), password_digest: params.fetch(:password_digest))
+      user = User.create(name: params.fetch(:name), email: params.fetch(:email), password: params.fetch(:password), password_confirmation: params[:password_confirmation])
       render json: message
     rescue ActionController::ParameterMissing => error
       render json: { error: error.message }, status: 422
@@ -66,8 +66,5 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:name, :email, :password_digest)
-    end
+
 end
