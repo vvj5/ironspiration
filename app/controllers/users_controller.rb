@@ -30,7 +30,7 @@ class UsersController < ApplicationController
    def create
     begin
       user = User.create(name: params.fetch(:name), email: params.fetch(:email), password: params.fetch(:password), password_confirmation: params[:password_confirmation])
-      render json: message
+      render json: user
     rescue ActionController::ParameterMissing => error
       render json: { error: error.message }, status: 422
     end
