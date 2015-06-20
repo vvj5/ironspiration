@@ -26,10 +26,9 @@ class UsersController < ApplicationController
 
   # POST /users
   # POST /users.json
-
    def create
     begin
-      user = User.create(name: params.fetch(:name), email: params.fetch(:email), password: params.fetch(:password), password_confirmation: params[:password_confirmation])
+      user = User.create(name: params.fetch(:name), email: params.fetch(:email), password: params.fetch(:password), password_confirmation: params(:password_confirmation))
       render json: user
     rescue ActionController::ParameterMissing => error
       render json: { error: error.message }, status: 422
@@ -64,6 +63,10 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def user_params
+      params.require(:user).permit(:name, :password, :password_confirmation)
     end
 
 
