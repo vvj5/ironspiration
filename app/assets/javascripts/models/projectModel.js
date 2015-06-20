@@ -9,6 +9,7 @@ var ProjectModel = Backbone.Model.extend({
         year: null,
         project_url: null,
         created_at: null,
+        type: "project",
         likes: 0
     },
     urlRoot: '/projects',
