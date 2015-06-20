@@ -8,3 +8,5 @@ var RegisterPageComponent = React.createClass({
         );
     }
 });
+
+
