@@ -16,3 +16,14 @@ var OverallPitchPageComponent = React.createClass({
 		);
 	}
 });
+
+<nav>
+	<ul>
+		<li>
+			<a class href="submit-pitch.html">SUBMIT</a> | 
+		</li>
+		<li>
+			<a href="#"><span>PITCHES</span></a>
+		</li>
+	</ul>
+</nav>

@@ -1,6 +1,7 @@
 
 var RegisteredUsersList = new UserCollection();
 var RegisterPageComponent = React.createClass({
+<<<<<<< HEAD
 	render: function () {
 		return (
 		<div>
@@ -44,3 +45,16 @@ var RegisterPageComponent = React.createClass({
 		RegisteredUsersList.add(regUser);
 	}
 });
+=======
+    render: function () {
+        return (
+          <div>
+            <h1> Register Page </h1>
+            <a href='#home'>Home</a>
+          </div>
+        );
+    }
+});
+
+
+>>>>>>> d0f6039c121f71e5ed6f576e20fb90c463b5672e

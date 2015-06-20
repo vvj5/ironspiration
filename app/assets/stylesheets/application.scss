@@ -14,133 +14,244 @@
 //  *= require_self
 //  */
 
-// @import 'reset';
-// @import 'colors';
+@import '_reset';
+@import '_colors';
 
 
-// /*
-//   ========================================
-//   Grid
-//   ========================================
-// */
+/*
+  ========================================
+  Grid
+  ========================================
+*/
 
-// .container {
-// 	max-width: 100%;
-// 	background-color: $ltgrey;
-// }
+.container {
+    max-width: 100%;
+}
 
-// img {
-// 	max-width: 100%;
-// }
-// /*
-//   ========================================
-//   Typography
-//   ========================================
-// */
+.grid-left {
+    width: 47%;
+    margin-left: 1.5%; 
+    float: left;
+    margin-top: 20px;
+}
 
-// h1 {
-// 	font-family: "museo-slab",serif;
-// 	font-style: normal;
-// 	font-weight: 700;
-// 	color: $dkblue;
-// }
+.grid-right {
+    width: 47%;
+    margin-right: 1.5%;
+    float: right;
+    margin-top: 37px;
+}
 
-// li {
-//   font-family: "lato",sans-serif;
-//   color: $dkgrey;
-//   font-size: 0.875rem;
-//   display: inline;
-// }
+body {
+    background-color: $ltgrey;
+}
 
-// h3, .login-button, .button {
-//   font-family: "lato",sans-serif;
-//   color: $dkblue;
-//   font-weight: bold;
-//   font-size: 0.8rem;
-// }
+section {
+    max-width: 90%;
+    margin: 0 auto;
+}
 
-// a {
-// 	text-decoration: none;
-// 	font-color: $dkgrey;
-// }
+img {
+    max-width: 100%;
+}
+/*
+  ========================================
+  Typography
+  ========================================
+*/
 
-// 	/*
-//   ========================================
-//   Clear Fix
-//   ========================================
-// */
+h1, span.project-txt {
+    font-family: "museo-slab",serif;
+    font-style: normal;
+    font-weight: 700;
+    color: $dkblue;
+    font-size: 1rem;
+}
 
-// .clear-fix {
-// 	clear: both;}
+li {
+  font-family: "lato",sans-serif;
+  color: $dkgrey;
+  font-size: 0.875rem;
+  display: inline;
+}
 
-// /*
-//   ========================================
-//   Header
-//   ========================================
-// */
+h2, .login-button, .button {
+  font-family: "lato",sans-serif;
+  color: $dkblue;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
 
-// header {
-// 	max-width: 100%;
-// 	height: 100px;
-// 	background-color: $ltblue;
-// 		.logo {
-// 			display: block;
-// 			text-align: center;
-// 			img {
-// 				margin-top: 35px;
-// 				overflow: hidden;}
-// 		}
-// }
+a {
+    text-decoration: none;
+    color: $dkgrey;
+}
 
-// nav {
-// 	margin-top: 50px;
-// 	text-align: center;
-// 	font-color: $dkgrey;}
+span {
+    color: $orange;
+}
 
-// 	/*
-//   ========================================
-//   Home
-//   ========================================
-// */
+span.project-txt {
+    font-size: 0.875rem;
+    line-height: 0.5;
+}
 
-// .screenshot {
-// 	margin-top: 30px;
-// 	h3 {
-// 		margin-left: 20px;
-// 		margin-bottom: 2px;}
-// }
+p {
+    font-family: "lato",sans-serif;
+      color: $dkgrey;
+      font-weight: light;
+      font-size: 0.8rem;
+      line-height: 1.4;
+}
+    /*
+  ========================================
+  Clear Fix
+  ========================================
+*/
 
-// /*
-//   ========================================
-//   Login
-//   ========================================
-// */
+.clear-fix {
+    clear: both;
+}
 
-// .grey-rectangle {
-// 	max-width: 80%;
-// 	height: 400px;
-// 	background-color: $dkgrey;
-// 	border-radius: 10px;
-// 	margin: 0 auto;
-// 	margin-top: 60px;
-// 	padding-top: 30px;
-// 	input {
-// 		background-color: $ltgrey;
-// 		border-radius: 5px;
-// 	  	border: solid 3px $ltblue;
-// 	  	text-align: center;
-// 	  	padding: 5px;
-// 	  	display: block;
-// 	  	margin: 20px auto;
-// 	}
-// 	.button {
-// 		background-color: $ltgrey;
-// 		height: 80px;
-// 		width: 80px;
-// 		border-radius: 50%;
-// 		text-align: center;
-// 		float: left;
-// 		margin: 10px;
-// 	}
-// }
+/*
+  ========================================
+  Header
+  ========================================
+*/
 
+header {
+    max-width: 100%;
+    height: 100px;
+    background-color: $ltblue;
+        .logo {
+            display: block;
+            text-align: center;
+            img {
+                margin-top: 35px;
+                overflow: hidden;}
+        }
+}
+
+nav {
+    margin-top: 50px;
+    text-align: center;
+    font-color: $dkgrey;
+}
+
+    /*
+  ========================================
+  Home
+  ========================================
+*/
+
+section.index {
+    max-width: 100%;
+}
+
+.screenshot {
+    margin-top: 30px;
+    h2 {
+        margin-left: 20px;
+        margin-bottom: 2px;}
+}
+
+/*
+  ========================================
+  Login/Sign Up/Submit Project/Submit Pitch
+  ========================================
+*/
+
+.grey-rectangle {
+    max-width: 80%;
+    background-color: $dkgrey;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 30px 0;
+    input {
+        background-color: $ltgrey;
+        border-radius: 5px;
+          border: solid 3px $ltblue;
+          text-align: center;
+          padding: 5px;
+          display: block;
+          margin: 20px auto;
+    }
+    .buttons {
+        text-align: center;
+        max-width: 100%;
+        .button {
+            background-color: $ltgrey;
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+            margin: 20px 10px;}
+        .sign-up, .submit {
+            color: $green;
+              border: solid 2px $green;}
+          .login {
+              color: $orange;
+              border: solid 2px $orange;}    
+          a .signup-text, .submit-text {
+            vertical-align: middle;
+            color: $green;
+            margin-top: 25px;}     
+        .login-text {
+            vertical-align: middle;
+            margin-top: 25px;
+            color: $orange;}
+    }
+}    
+
+
+/*
+  ========================================
+  Project Page
+  ========================================
+*/
+section {
+     h1 {
+        margin-top: 30px;}
+    img {
+        display: block;
+        margin: 2px auto;}
+}
+
+/*
+  ========================================
+  Success Page
+  ========================================
+*/
+
+section.success {
+    img {
+        margin-top: 15px;}
+    p {
+        color: $green;
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+}
+
+/*
+  ========================================
+  Pitch Page
+  ========================================
+*/
+
+section.pitch-page {
+    margin-top: 30px;
+    div {
+        margin-top: 10px;
+        padding: 3px;
+        &:nth-of-type(2n) {
+        background-color: $green;}
+    }
+    h1 {
+        margin-top: 0;}
+    
+}
