@@ -33,18 +33,27 @@ class ProjectsController < ApplicationController
 
   # POST /projects
   # POST /projects.json
-  def create
-    @project = Project.create(project_params)
+  # def create
+  #   @project = Project.create(project_params)
 
-    respond_to do |format|
-      if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
-        format.json { render :show, status: :created, location: @project }
-      else
-        format.html { render :new }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
-      end
-    end
+  #   respond_to do |format|
+  #     if @project.save
+  #       format.html { redirect_to @project, notice: 'Project was successfully created.' }
+  #       format.json { render :show, status: :created, location: @project }
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @project.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+
+    def create
+    # begin
+      project = Project.create(type: params.fetch(:type), title: params.fetch(:title), body: params.fetch(:body), location: params.fetch(:location), image_link: params.fetch(:image_link), project_url: params.fetch(:project_url), year: params.fetch(:year), likes: params.fetch(:likes))
+      render json: project
+    # rescue ActionController::ParameterMissing => error
+    #   render json: { error: error.message }, status: 422
+    # end
   end
 
   # PATCH/PUT /projects/1

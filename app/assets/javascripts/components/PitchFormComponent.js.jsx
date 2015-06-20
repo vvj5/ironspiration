@@ -1,14 +1,13 @@
+var PitchList = new PitchedCollection();
 var PitchFormComponent = React.createClass({
-    render: function () {
-        return (
-        	<div className="container">
-
+	render: function () {
+		return (
+			<div className="container">
 				<header>
 					<div className="logo">
 						<a href="#home"><img src="images/logo.png"/></a>
 					</div>
 				</header>
-
 				<nav>
 					<ul>
 						<li>
@@ -19,27 +18,33 @@ var PitchFormComponent = React.createClass({
 						</li>
 					</ul>
 				</nav>
-
 				<section>
 					<div className="grey-rectangle">
-						<input type="text" name="PROJECT-TITLE" placeholder="PROJECT TITLE" />
-						<input type="text" name="DETAILS" placeholder="DETAILS" />
-						<input type="text" name="YEAR-CREATED" placeholder="YEAR CREATED" />
-						<input type="text" name="LOCATION" placeholder="LOCATION" />
+						<input type="text" ref = "pitchTitle" name="PITCH-TITLE" placeholder="PITCH TITLE" />
+						<input type="text" ref="pitchBody" name="BODY" placeholder="DESCRIPTION" />
 
-						
 						<div className="buttons">
 							<a href="#success">
-								<div className="submit button">
+								<div onClick={this.addPitch} className="submit button">
 									<p className="submit-text">SUBMIT</p>
 								</div>
 							</a>
 						</div>
-
 					</div>
 				</section>
-
 			</div>
-        );
-    }
+		);
+	},
+
+	addPitch: function() {
+		var pitch = new PitchedModel({
+			user_id: null,
+			title: this.refs.pitchTitle.getDOMNode().value,
+			body: this.refs.pitchBody.getDOMNode().value
+		});
+		console.log(pitch);
+		pitch.save();
+		PitchList.add(pitch);
+	}
+
 });
