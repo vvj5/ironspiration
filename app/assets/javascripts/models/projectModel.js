@@ -2,7 +2,7 @@ var ProjectModel = Backbone.Model.extend({
     defaults: {
         _id: null,
         user_id: null,
-        image_url: '',
+        image_link: '',
         title: null,
         body: null,
         location: null,
