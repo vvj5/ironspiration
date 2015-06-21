@@ -27,12 +27,16 @@ var ImageListComponent = React.createClass({
 					</div>
 						
 				);
-			
 		});
 		return (
-			<div>
-			{thumbnails}
+			<div onClick = {this.linkToProjectPage}>
+				{thumbnails}
 			</div>
 		);
+	},
+
+	linkToProjectPage: function(e) {
+		console.log("test");
+		console.log(thumbnails[0].key);
 	}
 });
