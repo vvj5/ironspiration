@@ -6,7 +6,8 @@ user = User.create(name: Faker::Internet.user_name,
                password: Faker::Internet.password
                   )
 
-project = Project.create(title: Faker::Name.title,
+project = Project.create(category: Faker::Number.number(1),
+                         title: Faker::Name.title,
                           body: Faker::Lorem.paragraph,
                       location: Faker::Address.city,
                     image_link: Faker::Internet.url('example.com'),
