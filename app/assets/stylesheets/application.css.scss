@@ -10,12 +10,18 @@
 //  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
 //  * file per style scope.
 //  *
-//  *= require_tree .
-//  *= require_self
 //  */
-@import '_reset';
-@import '_colors';
+@import 'reset';
+@import 'colors';
 
+@mixin grid ($col-num) {
+  width: ($col * $col-num)+($gut * (($col-num)-1));
+  margin-right: $gut;
+  margin-left: $gut;
+  max-width: 100%;
+} 
+$col: 4.138889%;
+$gut: 1.5%;
 
 /*
   ========================================
@@ -27,32 +33,19 @@
     max-width: 100%;
 }
 
-.grid-left {
-    width: 47%;
-    margin-left: 1.5%; 
-    float: left;
-    margin-top: 20px;
-}
-
-.grid-right {
-    width: 47%;
-    margin-right: 1.5%;
-    float: right;
-    margin-top: 37px;
-}
-
 body {
     background-color: $ltgrey;
 }
 
 section {
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;
 }
 
 img {
     max-width: 100%;
 }
+
 /*
   ========================================
   Typography
@@ -92,7 +85,7 @@ span {
 
 span.project-txt {
     font-size: 0.875rem;
-    line-height: 0.5;
+    line-height: 2;
 }
 
 p {
@@ -143,15 +136,25 @@ nav {
   ========================================
 */
 
-section.index {
-    max-width: 100%;
-}
-
-.screenshot {
+.row {
+    width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+  .col6 {
+    box-sizing: border-box;
+    // display: inline-block;
+    float: left;
+    width: 100%;
+    font-family: sans-serif;
+    margin-bottom: 5px;
     margin-top: 30px;
-    h2 {
+        img {
+        width: 100%;
+        }
+        h2 {
         margin-left: 20px;
         margin-bottom: 2px;}
+    }
 }
 
 /*
@@ -170,11 +173,11 @@ section.index {
     input {
         background-color: $ltgrey;
         border-radius: 5px;
-          border: solid 3px $ltblue;
-          text-align: center;
-          padding: 5px;
-          display: block;
-          margin: 20px auto;
+        border: solid 3px $ltblue;
+        text-align: center;
+        padding: 5px;
+        display: block;
+        margin: 20px auto;
     }
     .buttons {
         text-align: center;
@@ -189,7 +192,7 @@ section.index {
             margin: 20px 10px;}
         .sign-up, .submit {
             color: $green;
-              border: solid 2px $green;}
+            border: solid 2px $green;}
           .login {
               color: $orange;
               border: solid 2px $orange;}    
@@ -210,13 +213,44 @@ section.index {
   Project Page
   ========================================
 */
+
+
 section {
      h1 {
         margin-top: 30px;}
     img {
         display: block;
         margin: 2px auto;}
+    .comment-box {
+        padding: 5px;
+        width: 97%;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: solid 1px $dkblue;
+        margin: 5px auto;
+            textarea {
+                border-radius: 5px;
+                width: 75%;
+            }
+            p {
+                font-size: 0.875rem;
+                line-height: 1.6;
+                &:nth-of-type(2n) {
+                background-color: $ltgrey;
+                }
+            }
+    }
 }
+
+.project-info {
+        width: 80%;
+        // background-color: red;
+        margin-top: 10px;
+            p {
+                line-height: 1.8;
+                width: 100%;
+            }
+    }
 
 /*
   ========================================
@@ -254,3 +288,7 @@ section.pitch-page {
         margin-top: 0;}
     
 }
+
+@import 'mid-media';
+@import 'max-media';
+

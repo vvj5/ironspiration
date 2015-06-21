@@ -3,31 +3,31 @@ var RegisteredUsersList = new UserCollection();
 var RegisterPageComponent = React.createClass({
 	render: function () {
 		return (
-		<div>
-			<div className="container">
+			<div>
+				<div className="container">
 
-				<header>
-					<div className="logo">
-						<a href="#home"><img src="images/logo.png" /></a>
-					</div>
-				</header>
-
-				<section>
-					<div className="grey-rectangle">
-						<input type="text" ref="username" placeholder="USERNAME" />
-						<input type="text" ref="password" placeholder="PASSWORD" />
-						<input type="text" ref="confirmPassword" placeholder="CONFIRM PASSWORD" />
-						<div className="buttons">
-							<a href="#">
-								<div onClick={this.registerUser} className="submit button">
-									<p className="btn-text">SUBMIT</p>
-								</div>
-							</a>
+					<header>
+						<div className="logo">
+							<a href="#home"><img src="images/logo.png" /></a>
 						</div>
-					</div>
-				</section>
-			</div>	
-		</div>
+					</header>
+
+					<section>
+						<div className="grey-rectangle">
+							<input type="text" ref="username" placeholder="USERNAME" />
+							<input type="text" ref="password" placeholder="PASSWORD" />
+							<input type="text" ref="confirmPassword" placeholder="CONFIRM PASSWORD" />
+							<div className="buttons">
+								<a href="#">
+									<div onClick={this.registerUser} className="submit button">
+										<p className="btn-text">SUBMIT</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</section>
+				</div>	
+			</div>
 		);
 	},
 

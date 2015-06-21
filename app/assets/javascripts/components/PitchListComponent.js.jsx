@@ -1,4 +1,4 @@
-var OverallPitchPageComponent = React.createClass({
+var PitchListComponent = React.createClass({
 	getInitialState: function() {
 		return {
 			PitchArray: []
@@ -17,23 +17,25 @@ var OverallPitchPageComponent = React.createClass({
 		);
 	},
 	render: function () {
-
 		pitches = this.state.PitchArray.map(function(pitchModel){
-			
 			return (
 					<div key={pitchModel.id}>
-						<h3>{pitchModel.title}</h3>
-						<div>{pitchModel.body}</div>
+						<h1>{pitchModel.title}</h1>
+						<p>{pitchModel.body}</p>
 					</div>
 				);
 			
 		});
+		
 		return (
 			<div>
-			{pitches}
+
+				<section className="pitch-page">
+					{pitches}
+				</section>
 			</div>
 		);
-	}
+	}	
 });
 
 
