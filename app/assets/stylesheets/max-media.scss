@@ -1,0 +1,33 @@
+@mixin grid ($col-num) {
+  width: ($col * $col-num)+($gut * (($col-num)-1));
+  margin-right: $gut;
+  max-width: 100%;} 
+
+$col: 4.138889%;
+$gut: 1.5%;
+
+
+/*
+  ========================================
+  Media Query-1024
+  ========================================
+*/
+
+    @media screen and (min-width: 1024px) {
+        
+/*
+  ========================================
+  Home
+  ========================================
+*/
+
+.row {
+    width: 90%;
+    padding-left: 120px;
+  .col6 {
+     @include grid(5);}
+     .col6:nth-of-type(2n) {
+         float: left;}        
+}
+
+}

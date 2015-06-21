@@ -39,7 +39,6 @@ var App = Backbone.Router.extend({
 	projectPage: function() {
 		React.render(
 		<div>
-			<h1> Individual Project Page </h1>
 			<OverallProjectPageComponent/>
 		</div>,
 		document.querySelector('#container'));
@@ -47,7 +46,6 @@ var App = Backbone.Router.extend({
 	pitchPage: function() {
 		React.render(
 		<div>
-			<h1> Pitch Page </h1>
 		   <OverallPitchPageComponent/>
 		</div>,
 		document.querySelector('#container'));
