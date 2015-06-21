@@ -4,7 +4,7 @@ var PitchedModel = Backbone.Model.extend({
         title: null,
         body: null,
         createdAt: null,
-        type: 2
+        category: 2
     },
     urlRoot: '/projects',
     idAttribute: '_id'
