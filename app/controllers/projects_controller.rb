@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+# before_action :set_project, only: [:show, :edit, :update, :destroy]
 skip_before_action :verify_authenticity_token
   # GET /projects
   # GET /projects.json
@@ -31,7 +31,7 @@ skip_before_action :verify_authenticity_token
   # POST /projects
   # POST /projects.json
     def create
-      authenticate_user!
+      # authenticate_user!
       @project = Project.new
       @project[:category]    = params[:category]
       @project[:title]       = params[:title]
