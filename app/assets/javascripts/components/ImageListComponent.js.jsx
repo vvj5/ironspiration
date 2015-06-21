@@ -1,32 +1,36 @@
 var ImageListComponent = React.createClass({
+	getInitialState: function() {
+		return {
+			ImgThumbnailArray: []
+		}
+	},
+	componentDidMount: function() {
+		$.get (
+			"http://localhost:3000/projects",
+			function(imgList) {
+				if(this.isMounted()) {
+					this.setState({
+						ImgThumbnailArray: (imgList)
+					});
+				}
+			}.bind(this)
+		);
+	},
 	render: function () {
-		console.log(ProjectList);
+
+		thumbnails = this.state.ImgThumbnailArray.map(function(testModel){
+			
+			return (
+					<div key={testModel.id}>
+						<h3>{testModel.title}</h3>
+						<img src={testModel.image_link} />
+					</div>
+				);
+			
+		});
 		return (
 			<div>
-				<div className="container">
-					<section className="index">
-						<div className="screenshot">
-							<h2>PROJECT NAME</h2>
-							<img src="http://www.knoxville-zoo.org/sites/www/Uploads/images/Exhibits/panda1_709041545401.png" />
-						</div>
-						<div className="screenshot">
-							<h2>PROJECT NAME</h2>
-							<img src="http://www.knoxville-zoo.org/sites/www/Uploads/images/Exhibits/panda1_709041545401.png" />
-						</div>
-						<div className="screenshot">
-							<h2>PROJECT NAME</h2>
-							<img src="http://www.knoxville-zoo.org/sites/www/Uploads/images/Exhibits/panda1_709041545401.png" />
-						</div>
-						<div className="screenshot">
-							<h2>PROJECT NAME</h2>
-							<img src="http://www.knoxville-zoo.org/sites/www/Uploads/images/Exhibits/panda1_709041545401.png" />
-						</div>
-						<div className="screenshot">
-							<h2>PROJECT NAME</h2>
-							<img src="http://www.knoxville-zoo.org/sites/www/Uploads/images/Exhibits/panda1_709041545401.png" />
-						</div>
-					</section>
-				</div>
+			{thumbnails}
 			</div>
 		);
 	}

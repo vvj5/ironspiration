@@ -10,7 +10,7 @@ var ProjectModel = Backbone.Model.extend({
         project_url: null,
         created_at: null,
         likes: 0,
-        type: 1
+        category: 1
     },
     urlRoot: '/projects',
     idAttribute: '_id'
