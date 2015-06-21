@@ -21,12 +21,12 @@ var ImageListComponent = React.createClass({
 		thumbnails = this.state.ImgThumbnailArray.map(function(testModel){
 			
 			return (
-					<div key={testModel.id}>
-						<h3>{testModel.title}</h3>
+					<div className="screenshot col6" key ={testModel.id}>
+						<h2>{testModel.title}</h2>
 						<img src={testModel.image_link} />
 					</div>
+						
 				);
-			
 		});
 		return (
 			<div>

@@ -9,8 +9,6 @@ var OverallPitchPageComponent = React.createClass({
 					</div>
 				</header>
 
-				
-
 				<section className="pitch-page">
 					<div>
 						<h1>PITCH TITLE</h1>
