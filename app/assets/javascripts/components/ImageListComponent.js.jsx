@@ -22,13 +22,16 @@ var ImageListComponent = React.createClass({
     render: function() {
 
         thumbnails = this.state.ImgThumbnailArray.map(function(testModel){
-            
+
+            if(testModel.category === 1) {
+
             return (
                     <div className="col6" ref="pic" key={testModel.id}>
                         <h1>{testModel.title}</h1>
                         <img data-id={testModel.id} src={testModel.image_link} />
                     </div>
                 );
+            }
             
         });
         return (
