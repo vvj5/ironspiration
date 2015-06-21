@@ -18,12 +18,15 @@ var PitchListComponent = React.createClass({
 	},
 	render: function () {
 		pitches = this.state.PitchArray.map(function(pitchModel){
+
+		if(pitchmodel.category === 2) {
 			return (
 					<div key={pitchModel.id}>
 						<h1>{pitchModel.title}</h1>
 						<p>{pitchModel.body}</p>
 					</div>
 				);
+			}
 			
 		});
 		
