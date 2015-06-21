@@ -1,7 +1,6 @@
 /* global Backbone React */
+var ImgThumbnailArray =[];
 var ProjectList = new ProjectCollection();
-ProjectList.fetch();
-console.log(ProjectList.length);
 var App = Backbone.Router.extend({
 	routes: {
 		'': 'home',
