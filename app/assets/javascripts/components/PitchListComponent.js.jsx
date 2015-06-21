@@ -1,4 +1,4 @@
-var OverallPitchPageComponent = React.createClass({
+var PitchListComponent = React.createClass({
 	getInitialState: function() {
 		return {
 			PitchArray: []
@@ -17,78 +17,25 @@ var OverallPitchPageComponent = React.createClass({
 		);
 	},
 	render: function () {
-
-				<header>
-					<div className="logo">
-						<a href="#home"><img src="images/logo.png"/></a>
-					</div>
-				</header>
-
-				<section className="pitch-page">
-					<div>
-						<h1>PITCH TITLE</h1>
-						<p>A brief description of the pitch goes here.</p>
-					</div>
-					<div>
-						<h1>PITCH TITLE</h1>
-						<p>A brief description of the pitch goes here.</p>
-					</div>
-					<div>
-						<h1>PITCH TITLE</h1>
-						<p>A brief description of the pitch goes here.</p>
-					</div>
-					<div>
-						<h1>PITCH TITLE</h1>
-						<p>A brief description of the pitch goes here.</p>
-					</div>
-					<div>
-						<h1>PITCH TITLE</h1>
-						<p>A brief description of the pitch goes here.</p>
-					</div>
-					<div>
-						<h1>PITCH TITLE</h1>
-						<p>A brief description of the pitch goes here.</p>
-					</div>
-					<div>
-						<h1>PITCH TITLE</h1>
-						<p>A brief description of the pitch goes here.</p>
-					</div>
-					<div>
-						<h1>PITCH TITLE</h1>
-						<p>A brief description of the pitch goes here.</p>
-					</div>
-					<div>
-						<h1>PITCH TITLE</h1>
-						<p>A brief description of the pitch goes here.</p>
-					</div>
-					<div>
-						<h1>PITCH TITLE</h1>
-						<p>A brief description of the pitch goes here.</p>
-					</div>
-					<div>
-						<h1>PITCH TITLE</h1>
-						<p>A brief description of the pitch goes here.</p>
-					</div>
-				</section>
-			</div>	
-		);	
-    }
 		pitches = this.state.PitchArray.map(function(pitchModel){
-			
 			return (
 					<div key={pitchModel.id}>
-						<h3>{pitchModel.title}</h3>
-						<div>{pitchModel.body}</div>
+						<h1>{pitchModel.title}</h1>
+						<p>{pitchModel.body}</p>
 					</div>
 				);
 			
 		});
+		
 		return (
 			<div>
-				{pitches}
+
+				<section className="pitch-page">
+					{pitches}
+				</section>
 			</div>
 		);
-	}
+	}	
 });
 
 

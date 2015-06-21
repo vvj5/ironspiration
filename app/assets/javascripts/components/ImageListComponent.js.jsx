@@ -21,14 +21,14 @@ var ImageListComponent = React.createClass({
 		thumbnails = this.state.ImgThumbnailArray.map(function(testModel){
 			
 			return (
-					<div className="screenshot col6" key ={testModel.id}>
-						<h2>{testModel.title}</h2>
-					</div>
-						
+					<div className="col6" key ={testModel.id}>
+						<h1>{testModel.title}</h1>
+						<img src="https://vice-images.vice.com/images/articles/crops/2013/02/05/you-should-forgive-bill-murray-for-making-a-bad-movie-1413325188872-crop_mobile_400.jpeg?resize=*:*&output-quality=75" />
+					</div>	
 				);
 		});
 		return (
-			<div onClick = {this.linkToProjectPage}>
+			<div className="row" onClick = {this.linkToProjectPage}>
 				{thumbnails}
 			</div>
 		);

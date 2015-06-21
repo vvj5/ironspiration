@@ -1,0 +1,96 @@
+@mixin grid ($col-num) {
+  width: ($col * $col-num)+($gut * (($col-num)-1));
+  margin-right: $gut;
+  max-width: 100%;
+} 
+$col: 4.138889%;
+$gut: 1.5%;
+
+/*
+  ========================================
+  Media Query-700
+  ========================================
+*/
+
+@media screen and (min-width: 700px) {
+
+
+/*
+  ========================================
+  Home
+  ========================================
+*/
+
+.row {
+    width: 90%;
+  .col6 {
+     @include grid(8);}
+     .col6:nth-of-type(2n) {
+         float: right;
+     }
+        
+}
+
+/*
+  ========================================
+  Project Page
+  ========================================
+*/
+
+section {
+    h1 {
+        margin-top: 0;}
+    img {
+        display: block;
+        margin: 2px auto;}
+    .comment-box {
+        padding: 5px;
+        width: 96%;
+        margin-top: 5px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: solid 1px $dkblue;
+            textarea {
+                border: solid 1px $dkblue;
+                border-radius: 5px;
+                width: 75%;}
+            p {
+                font-size: 0.875rem;
+                line-height: 1.6;
+                &:nth-of-type(2n) {
+                    background-color: $ltgrey;
+                }
+            }
+    }
+    p.project-text {
+        margin-top: 20px;
+    }
+
+    .project-photo, .project-comments {
+    width: 47%;
+    margin-left: 1.5%; 
+    float: left;
+    margin-top: 20px;
+}
+
+    .project-info {
+        width: 47%;
+        margin-right: 1.5%;
+        float: right;
+        margin-top: 30px;
+    }
+}
+
+
+/*
+  ========================================
+  Pitch Page
+  ========================================
+*/
+
+    section.pitch-page {
+        p {
+        margin-top: 0;}
+    }    
+
+}

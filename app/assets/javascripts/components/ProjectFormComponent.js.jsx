@@ -12,10 +12,10 @@ var ProjectFormComponent = React.createClass({
 	            <nav>
 	                <ul>
 	                    <li>
-	                        <a href="#home"><span>SUBMIT</span></a> | 
+	                        <a href="#"><span>SUBMIT</span></a> | 
 	                    </li>
 	                    <li>
-	                        <a href="#pitchPage">PITCHES</a>
+	                        <a href="#project-page">PROJECTS</a>
 	                    </li>
 	                </ul>
 	            </nav>
