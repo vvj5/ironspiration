@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :verify_authenticity_token
   # GET /users
   # GET /users.json
   def index
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   # POST /users.json
    def create
     begin
-      user = User.create(name: params.fetch(:name), email: params.fetch(:email), password: params.fetch(:password), password_confirmation: params(:password_confirmation))
+      user = User.create(name: params.fetch(:name), email: params.fetch(:email), password: params.fetch(:password), password_confirmation: params.fetch(:password_confirmation))
       render json: user
     rescue ActionController::ParameterMissing => error
       render json: { error: error.message }, status: 422
