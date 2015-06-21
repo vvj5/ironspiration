@@ -12,7 +12,7 @@ end
 
 
 
-# Prefix Verb   URI Pattern                  Controller#Action
+#    Prefix Verb   URI Pattern                  Controller#Action
 #       comments GET    /comments(.:format)          comments#index
 #                POST   /comments(.:format)          comments#create
 #    new_comment GET    /comments/new(.:format)      comments#new
@@ -21,6 +21,7 @@ end
 #                PATCH  /comments/:id(.:format)      comments#update
 #                PUT    /comments/:id(.:format)      comments#update
 #                DELETE /comments/:id(.:format)      comments#destroy
+
 #          users GET    /users(.:format)             users#index
 #                POST   /users(.:format)             users#create
 #       new_user GET    /users/new(.:format)         users#new
@@ -29,6 +30,7 @@ end
 #                PATCH  /users/:id(.:format)         users#update
 #                PUT    /users/:id(.:format)         users#update
 #                DELETE /users/:id(.:format)         users#destroy
+
 #       projects GET    /projects(.:format)          projects#index
 #                POST   /projects(.:format)          projects#create
 #    new_project GET    /projects/new(.:format)      projects#new
@@ -37,7 +39,9 @@ end
 #                PATCH  /projects/:id(.:format)      projects#update
 #                PUT    /projects/:id(.:format)      projects#update
 #                DELETE /projects/:id(.:format)      projects#destroy
+
 #           root GET    /                            application#index
+
 #          login GET    /login(.:format)             sessions#new
 # create_session POST   /login(.:format)             sessions#create
 #         logout GET    /logout(.:format)            sessions#destroy

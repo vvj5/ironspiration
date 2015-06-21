@@ -31,15 +31,16 @@ skip_before_action :verify_authenticity_token
   # POST /projects
   # POST /projects.json
     def create
+      authenticate_user!
       @project = Project.new
-      @project[:category] = params[:category]
-      @project[:title] = params[:title]
-      @project[:body] = params[:body]
-      @project[:location] = params[:location]
-      @project[:image_link] = params[:image_link]
+      @project[:category]    = params[:category]
+      @project[:title]       = params[:title]
+      @project[:body]        = params[:body]
+      @project[:location]    = params[:location]
+      @project[:image_link]  = params[:image_link]
       @project[:project_url] = params[:project_url]
-      @project[:year] = params[:year]
-      @project[:likes] = params[:likes]
+      @project[:year]        = params[:year]
+      @project[:likes]       = params[:likes]
       @project.save
 
       render json: @project
@@ -54,7 +55,7 @@ skip_before_action :verify_authenticity_token
 
     # Never trust parameters from the scary internet, only allow the white list through.
 
-    # def project_params
-    #   params.require(:project).permit(:title, :body, :location, :image_link, :project_url, :year, :likes)
-    # end
+  # def project_params
+  #   params.require(:project).permit(:title, :body, :location, :image_link, :project_url, :year, :likes)
+  # end
 end
