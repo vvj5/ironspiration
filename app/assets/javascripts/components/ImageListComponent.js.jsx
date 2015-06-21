@@ -23,15 +23,19 @@ var ImageListComponent = React.createClass({
 			return (
 					<div className="screenshot col6" key ={testModel.id}>
 						<h2>{testModel.title}</h2>
-						<img src={testModel.image_link} />
 					</div>
 						
 				);
 		});
 		return (
-			<div>
-			{thumbnails}
+			<div onClick = {this.linkToProjectPage}>
+				{thumbnails}
 			</div>
 		);
+	},
+
+	linkToProjectPage: function(e) {
+		console.log("test");
+		console.log(thumbnails[0].key);
 	}
 });
