@@ -85,7 +85,7 @@ var OverallPitchPageComponent = React.createClass({
 		});
 		return (
 			<div>
-			{pitches}
+				{pitches}
 			</div>
 		);
 	}
