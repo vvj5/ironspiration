@@ -36,7 +36,7 @@ var ImageListComponent = React.createClass({
 	},
 
 	linkToProjectPage: function(e) {
-		console.log("idgaf");
+		console.log("test");
 		console.log(thumbnails[0].key);
 	}
 });

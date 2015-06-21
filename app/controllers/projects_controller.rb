@@ -31,8 +31,18 @@ skip_before_action :verify_authenticity_token
   # POST /projects
   # POST /projects.json
     def create
-      project = Project.create(category: params.fetch(:category), title: params.fetch(:title), body: params.fetch(:body), location: params.fetch(:location), image_link: params.fetch(:image_link), project_url: params.fetch(:project_url), year: params.fetch(:year), likes: params.fetch(:likes))
-      render json: project
+      @project = Project.new
+      @project[:category] = params[:project][:image_link]
+      @project[:title] = params[:project][:title] 
+      @project[:body] = params[:project][:body] 
+      @project[:location] = params[:project][:location] if params[:project][:category] == 1
+      @project[:image_link] = params[:project][:image_link] if params[:project][:category] == 1
+      @project[:project_url] = params[:project][:project_url] if params[:project][:category] == 1
+      @project[:year] = params[:project][:year] if params[:project][:category] == 1
+      @project[:likes] = params[:project][:likes] if params[:project][:category] == 1
+      @project.save
+  
+      render json: @project
     end
 
 
