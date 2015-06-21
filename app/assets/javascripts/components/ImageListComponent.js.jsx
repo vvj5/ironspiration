@@ -21,7 +21,7 @@ var ImageListComponent = React.createClass({
 		thumbnails = this.state.ImgThumbnailArray.map(function(testModel){
 			
 			return (
-					<div key={testModel.id}>
+					<div ref="pic" key={testModel.id}>
 						<h3>{testModel.title}</h3>
 						<img src={testModel.image_link} />
 					</div>
@@ -29,9 +29,14 @@ var ImageListComponent = React.createClass({
 			
 		});
 		return (
-			<div>
-			{thumbnails}
+			<div onClick = {this.linkToProjectPage}>
+				{thumbnails}
 			</div>
 		);
+	},
+
+	linkToProjectPage: function(e) {
+		console.log("idgaf");
+		console.log(thumbnails[0].key);
 	}
 });
