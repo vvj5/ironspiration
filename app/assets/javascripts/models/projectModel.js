@@ -12,7 +12,7 @@ var ProjectModel = Backbone.Model.extend({
         likes: 0,
         category: 1
     },
-    urlRoot: 'http://ironspiration.herokuapp.com/projects',
+    urlRoot: '/projects',
     idAttribute: '_id'
 
     // validate: function(attr) {
