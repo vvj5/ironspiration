@@ -24,7 +24,7 @@ skip_before_action :verify_authenticity_token
   # POST /comments
   # POST /comments.json
   def create
-    # authenticate_user!
+    authenticate_user!
     @comment = Comment.new
     @comment[:body]       = params[:body]
     @comment[:project_id] = params[:project_id]

@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
 
-  skip_before_action :verify_authenticity_token
-
   # GET /users
   # GET /users.json
   def index

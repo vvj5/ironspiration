@@ -31,7 +31,7 @@ skip_before_action :verify_authenticity_token
   # POST /projects
   # POST /projects.json
     def create
-      # authenticate_user!
+      authenticate_user!
       @project = Project.new
       @project[:category]    = params[:category]
       @project[:title]       = params[:title]

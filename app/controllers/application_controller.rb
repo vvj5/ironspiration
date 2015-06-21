@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::Base
 skip_before_action :verify_authenticity_token
-protect_from_forgery with: :exception
 
-  # before_filter :current_user
+  before_filter :current_user
 
   def current_user
     if @current_user.nil?
@@ -16,8 +15,7 @@ protect_from_forgery with: :exception
 
   def authenticate_user!
     unless current_user
-      flash[:alert] = "Sorry, you need to be logged in to do that!"
-      redirect_to login_path
+      render json: { message: "Sorry, you need to be logged in to do that!" }
     end
   end
 
