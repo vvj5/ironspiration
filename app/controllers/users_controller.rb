@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-  skip_before_action :verify_authenticity_token
+
   # GET /users
   # GET /users.json
   def index
@@ -20,16 +19,19 @@ class UsersController < ApplicationController
     render json: @user
   end
 
-  # GET /users/1/edit
-  def edit
-  end
-
   # POST /users
   # POST /users.json
    def create
-      user = User.create(name: params.fetch(:name), email: params.fetch(:email), password: params.fetch(:password), password_confirmation: params.fetch(:password_confirmation))
-      render json: user
+      @user = User.new
+      @user[:name]     = params[:name]
+      @user[:email]    = params[:email]
+      @user[:password] = params[:password]
+      @user[:password_confirmation] = params[:password_confirmation]
+      @user.save
+
+      render json: @user
   end
+
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json

@@ -22,7 +22,7 @@ var OverallProjectPageComponent = React.createClass({
                     </nav>
                 </div>
                 <ImageAndTitleComponent testPic={this.props.picture}/>
-                <ProjectDescriptionComponent />
+                <ProjectDescriptionComponent testDesc={this.props.picture}/>
             </div>
         );
     }

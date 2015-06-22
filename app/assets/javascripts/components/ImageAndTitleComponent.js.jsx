@@ -31,9 +31,6 @@ var ImageAndTitleComponent = React.createClass({
               </div>
           );
         }
-        else {
-          // console.log("false");
-        }
       });
       return (
         <section>
