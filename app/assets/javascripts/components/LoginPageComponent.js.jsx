@@ -11,9 +11,9 @@ var LoginPageComponent = React.createClass({
 					<section>
 						<div className="grey-rectangle">
 							<input type="text" ref="user" placeholder="USERNAME" />
-							<input type="text" ref="pw" placeholder="PASSWORD" />
+							<input type="password" ref="pw" placeholder="PASSWORD" />
 							<div className="buttons">
-								<a href="#success">
+								<a href="#register">
 									<div className="sign-up button">
 										<p className="signup-text">SIGN UP</p>
 									</div>

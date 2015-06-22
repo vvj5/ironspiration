@@ -14,11 +14,11 @@ var RegisterPageComponent = React.createClass({
 				<section>
 					<div className="grey-rectangle">
 						<input type="text" ref="username" name="USERNAME" placeholder="USERNAME" />
-						<input type="text" ref="password" name="PASSWORD" placeholder="PASSWORD" />
-						<input type="text" ref="confirmPassword" name="PASSWORD" placeholder="CONFIRM PASSWORD" />
+						<input type="password" ref="password" name="PASSWORD" placeholder="PASSWORD" />
+						<input type="password" ref="confirmPassword" name="PASSWORD" placeholder="CONFIRM PASSWORD" />
 						
 						<div className="buttons">
-							<a href="#">
+							<a href="#login">
 								<div onClick={this.registerUser} className="submit button">
 									<p className="submit-text">SUBMIT</p>
 								</div>
