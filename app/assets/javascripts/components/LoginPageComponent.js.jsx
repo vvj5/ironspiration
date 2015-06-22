@@ -5,7 +5,7 @@ var LoginPageComponent = React.createClass({
 				<div className="container">
 					<header>
 						<div className="logo">
-							<a href="#home"><img src="images/logo.png"/></a>
+							<a href="#home"><img src="http://i.imgur.com/lCTMp9r.png"/></a>
 						</div>
 					</header>
 					<section>
@@ -32,29 +32,22 @@ var LoginPageComponent = React.createClass({
 	},
 
 	userLogin: function() {
-		$.get (
-    		"http://localhost:3000/users",
-    		verifyUser,
-    		"json"
-        );
+
+		var userObj = {
+			name: this.refs.user.getDOMNode().value,
+			password: this.refs.pw.getDOMNode().value
+		};
+
+		console.log(userObj);
+
+		$.ajax({
+		url: 'localhost:3000/login',
+		type: 'POST',
+		data: userObj,
+		});
 
 		var userInput = this.refs.user.getDOMNode().value;
-		var passwordInput = this.refs.pw.getDOMNode().value;
+		var passwordInput = this.refs.pw.getDOMNode().value
 
-		function verifyUser(userList) {
-			console.log(userList);
-			console.log(userInput);
-			
-			for (var i=0; i<userList.length; i++) {
-				if(userInput === userList[i].name) {
-					// if(passwordInput === userList[i].password) {
-						console.log("works");
-					// }
-				}
-				else {
-					console.log("false");
-				}
-			}
-		};
 	}
 });

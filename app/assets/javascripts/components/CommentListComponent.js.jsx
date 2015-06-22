@@ -3,6 +3,7 @@ var CommentListComponent = React.createClass({
 		return (
 			<section>
 				<div className="comment-box">
+					<CommentFormComponent />
 					<p>This site rulezzz</p>
 					<p>Bill Murray is my spirit animal</p>
 					<p>Yummmm goldfish...</p>

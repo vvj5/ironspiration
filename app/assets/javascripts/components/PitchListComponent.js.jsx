@@ -32,7 +32,6 @@ var PitchListComponent = React.createClass({
 		
 		return (
 			<div>
-
 				<section className="pitch-page">
 					{pitches}
 				</section>
