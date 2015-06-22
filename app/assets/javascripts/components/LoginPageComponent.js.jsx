@@ -5,7 +5,7 @@ var LoginPageComponent = React.createClass({
 				<div className="container">
 					<header>
 						<div className="logo">
-							<a href="#home"><img src="images/logo.png"/></a>
+							<a href="#home"><img src="http://i.imgur.com/lCTMp9r.png"/></a>
 						</div>
 					</header>
 					<section>

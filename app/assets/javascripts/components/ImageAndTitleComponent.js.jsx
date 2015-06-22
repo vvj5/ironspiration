@@ -28,7 +28,6 @@ var ImageAndTitleComponent = React.createClass({
                 <h1>{testProject.title}</h1>
                 <img src={testProject.image_link} />
                 <CommentListComponent />
-                <CommentFormComponent />
               </div>
           );
         }
