@@ -7,7 +7,7 @@ var UserModel = Backbone.Model.extend({
 		created_at: null,
 		email: 'test@gmail.com'
 	},
-	urlRoot: '/users',
+	urlRoot: 'http://ironspiration.herokuapp.com/users',
 	idAttribute: '_id'
 
 	// validate: function(attr) {
