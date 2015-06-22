@@ -96,6 +96,8 @@ p {
       font-size: 0.8rem;
       line-height: 1.4;
 }
+
+
     /*
   ========================================
   Clear Fix
@@ -129,6 +131,9 @@ nav {
     margin-top: 50px;
     text-align: center;
     font-color: $dkgrey;
+    p {
+      margin: 10px auto;
+    }
 }
 
     /*
@@ -150,13 +155,19 @@ nav {
     margin-bottom: 5px;
     margin-top: 30px;
         img {
-        width: 100%;
-        border-radius: 5px;
-        // border: solid 4px #ffffff;
+          width: 100%;
+          border-radius: 5px;
         }
-        h2 {
-        margin-left: 20px;
-        margin-bottom: 7px;}
+        h1 {
+          margin-left: 15px;
+          margin-bottom: 2px;}
+        img {
+            cursor: pointer;
+            opacity: 1.0;
+            filter: alpha(opacity=40);}
+        img:hover {
+            opacity: 0.5;
+            filter: alpha(opacity=100);}
     }
 }
 
@@ -220,14 +231,15 @@ nav {
 
 section {
      h1 {
-        margin-top: 30px;}
+        margin-top: 30px;
+        margin-left: 70px;}
     img {
         display: block;
         margin: 2px auto;
         border-radius: 5px;}
     .comment-box {
         padding: 5px;
-        width: 100%;
+        width: 90%;
         background-color: #ffffff;
         border-radius: 5px;
         border: solid 1px $dkblue;
@@ -255,6 +267,8 @@ section {
                 width: 100%;
             }
     }
+
+
 
 /*
   ========================================
@@ -288,10 +302,32 @@ section.pitch-page {
         &:nth-of-type(2n) {
         background-color: $green;}
     }
-    h1 {
-        margin-top: 0;}
+    .pitch-title {
+        margin-top: 0;
+        margin-left: 0;}
     
 }
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+footer {
+  background-color: $dkgrey;
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+  p {
+    color: $green;
+    text-align: center;
+    padding-top: 15px;
+    a {
+      color: $green;
+    }
+  }
+} 
 
 @import 'mid-media';
 @import 'max-media';
