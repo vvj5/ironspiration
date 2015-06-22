@@ -9,16 +9,4 @@ var UserModel = Backbone.Model.extend({
 	},
 	urlRoot: 'http://ironspiration.herokuapp.com/users',
 	idAttribute: '_id'
-
-	// validate: function(attr) {
-	// 	if (!attrs.name) {
- //            return 'Please add username.';
- //        }
- //        if (!attrs.password) {
- //            return 'Please add password.';
- //        }
- //        if (!attrs.password_confirmation) {
- //            return 'Please confirm password.';
- //        }
-	// }
 });

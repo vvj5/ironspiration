@@ -14,23 +14,23 @@ var ProjectModel = Backbone.Model.extend({
 	},
 	urlRoot: 'http://ironspiration.herokuapp.com/projects',
 	idAttribute: '_id',
-	validate: function(attr, options) {
-		if(attr.image_link.length === 0){
-			return 'A photo link must be present';
-		}
-		else if(attr.title.length === 0){
-			return 'A title must be present';
-		}
-		else if(attr.body.length === 0){
-			return 'A body must be present';
-		}
-		else if(attr.location.length === 0){
-			return 'A location must be present';
-		}
-		else if(attr.project_url.length === 0){
-			return 'A project link must be present';
-		}
-		return false;
-	}
+	// validate: function(attr, options) {
+	// 	if(attr.image_link.length === 0){
+	// 		return 'A photo link must be present';
+	// 	}
+	// 	else if(attr.title.length === 0){
+	// 		return 'A title must be present';
+	// 	}
+	// 	else if(attr.body.length === 0){
+	// 		return 'A body must be present';
+	// 	}
+	// 	else if(attr.location.length === 0){
+	// 		return 'A location must be present';
+	// 	}
+	// 	else if(attr.project_url.length === 0){
+	// 		return 'A project link must be present';
+	// 	}
+	// 	return false;
+	// }
 });
 

@@ -62,3 +62,9 @@ var ProjectFormComponent = React.createClass({
     	// console.log(ProjectList);
     }
 });
+
+function dropPage() {
+    myRouter.navigate("home", {trigger:true})
+}
+
+setTimeout(dropPage, 1000)
