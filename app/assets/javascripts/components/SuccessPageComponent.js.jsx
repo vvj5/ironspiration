@@ -27,5 +27,12 @@ var SuccessPageComponent = React.createClass({
 			</div>
         );
     }
+
 });
+function dropPage() {
+    myRouter.navigate("home", {trigger:true})
+}
+
+setTimeout(dropPage, 1000)
+
 
