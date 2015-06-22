@@ -9,7 +9,7 @@ var ImageListComponent = React.createClass({
     },
     componentDidMount: function() {
         $.get (
-            "http://localhost:3000/projects",
+            "http://ironspiration.herokuapp.com/projects",
             function(imgList) {
                 if(this.isMounted()) {
                     this.setState({

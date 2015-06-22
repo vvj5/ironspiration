@@ -41,7 +41,7 @@ var LoginPageComponent = React.createClass({
 		console.log(userObj);
 
 		$.ajax({
-		url: 'localhost:3000/login',
+		url: 'http://ironspiration.herokuapp.com/login',
 		type: 'POST',
 		data: userObj,
 		});

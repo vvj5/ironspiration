@@ -6,7 +6,7 @@ var PitchListComponent = React.createClass({
 	},
 	componentDidMount: function() {
 		$.get (
-			"http://localhost:3000/projects",
+			"http://ironspiration.herokuapp.com/projects",
 			function(pitchList) {
 				if(this.isMounted()) {
 					this.setState({
