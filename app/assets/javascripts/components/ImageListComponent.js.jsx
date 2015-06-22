@@ -45,6 +45,9 @@ var ImageListComponent = React.createClass({
     },
     linkToProjectPage: function(e) {
         var dataID = $(e.target).attr("data-id");
+        if(dataID === undefined) {
+            myRouter.navigate("home", {trigger:true})
+        }
         console.log(dataID);
         myRouter.navigate("project-page/"+dataID, {trigger:true});
     }
