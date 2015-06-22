@@ -11,7 +11,7 @@ var CommentFormComponent = React.createClass({
     postComment: function(e) {
     	e.preventDefault();
 		var comment = new CommentModel({
-			text: this.refs.comment.getDOMNode().value
+			body: this.refs.comment.getDOMNode().value
 		});
 		comment.save();
 		commentList.add(comment);
