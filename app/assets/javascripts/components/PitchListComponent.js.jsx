@@ -22,7 +22,7 @@ var PitchListComponent = React.createClass({
 		if(pitchModel.category === 2) {
 			return (
 					<div key={pitchModel.id}>
-						<h1>{pitchModel.title}</h1>
+						<h1 className="pitch-title">{pitchModel.title}</h1>
 						<p>{pitchModel.body}</p>
 					</div>
 				);

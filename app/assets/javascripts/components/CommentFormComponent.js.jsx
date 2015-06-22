@@ -2,8 +2,8 @@ var CommentFormComponent = React.createClass({
     render: function () {
         return (
           <div>
-          	<textarea></textarea>
-          	<button type="submit">Add Comment</button>
+          	<textarea ref="comment"></textarea>
+          	<button onClick={this.postComment} type="submit">Add Comment</button>
           </div>
         );
     }

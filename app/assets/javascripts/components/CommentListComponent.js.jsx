@@ -4,12 +4,10 @@ var CommentListComponent = React.createClass({
 			<section>
 				<div className="comment-box">
 					<CommentFormComponent />
-					<p>This site rulezzz</p>
-					<p>Bill Murray is my spirit animal</p>
-					<p>Yummmm goldfish...</p>
-					<p>Dude. This is the best site Ie ever seen.</p>
-					<p>U rock 4real</p>
-					<p>I have nothing to say. So I won.</p>
+					<p>This site is bomb</p>
+					<p>Bill murray wuz here</p>
+					<p>This totes rox 4real</p>
+					<p>Can I get your code, brah?</p>
 				</div>
 			</section>
 		);
