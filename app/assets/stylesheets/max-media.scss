@@ -23,7 +23,7 @@ $gut: 1.5%;
 
 .row {
     width: 90%;
-    padding-left: 120px;
+    padding-left: 180px;
   .col6 {
      @include grid(5);}
      .col6:nth-of-type(2n) {
