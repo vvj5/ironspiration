@@ -38,6 +38,19 @@ var RegisterPageComponent = React.createClass({
 			password_confirmation: this.refs.confirmPassword.getDOMNode().value
 		});
 
+		// if (!UserModel.name) {
+  //           console.log('Please add username.');
+  //       }
+  //       else if (!UserModel.password) {
+  //           console.log('Please add password.');
+  //       }
+  //       else if (!UserModel.confirmPassword) {
+  //           console.log('Please add password.');
+  //       }
+  //       else {
+        	myRouter.navigate("login", {trigger:true})
+  //       }
+
 		console.log(regUser);
 		regUser.save();
 		RegisteredUsersList.add(regUser);

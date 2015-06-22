@@ -12,6 +12,7 @@ var LoginPageComponent = React.createClass({
 						<div className="grey-rectangle">
 							<input type="text" ref="user" placeholder="USERNAME" />
 							<input type="password" ref="pw" placeholder="PASSWORD" />
+							<div ref='errors'></div>
 							<div className="buttons">
 								<a href="#register">
 									<div className="sign-up button">
@@ -20,7 +21,7 @@ var LoginPageComponent = React.createClass({
 								</a>
 								<a href="#">
 									<div onClick={this.userLogin} className="login button">
-										<p className="login-text">LOG IN</p>
+										<p className="login-text">LOGIN</p>
 									</div>
 								</a>
 							</div>
@@ -31,26 +32,21 @@ var LoginPageComponent = React.createClass({
 		);
 	},
 
-	userLogin: function() {
-
+	userLogin: function(e) {
+		e.preventDefault();
 		var userObj = {
 			name: this.refs.user.getDOMNode().value,
 			password: this.refs.pw.getDOMNode().value
 		};
 
-		$.get (
-			'http://ironspiration.herokuapp.com/users',
-			testUser
-
-		);
-
-		function testUser(list) {
-			console.log(list);
-			for(var i=0; i<list.length;i++) {
-				if(userObj.name === list[i].name) {
-					myRouter.navigate("home", {trigger:true})
-				}
-			}
-		}
+		if (!userObj.name) {
+            return 'Please add username.';
+        }
+        else if (!userObj.password) {
+            return 'Please add password.';
+        }
+        else {
+        	myRouter.navigate("login", {trigger:true})
+        }
 	}
 });
