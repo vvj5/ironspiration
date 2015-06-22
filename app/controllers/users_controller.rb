@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
    def create
-      @user = User.create
+      @user = User.new
       @user[:name]     = params[:name]
       @user[:email]    = params[:email]
       @user[:password] = params[:password]
