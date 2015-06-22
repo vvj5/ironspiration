@@ -13,10 +13,10 @@ var HomePageComponent = React.createClass({
 						<a href="#login">LOGIN</a> | 
 					</li>
 					<li>
-						<a href="#project-form">SUBMIT</a> | 
+						<a href="#project-form"> SUBMIT</a> | 
 					</li>
 					<li>
-						<a href="#pitch-page">PITCHES</a>
+						<a href="#pitch-page"> PITCHES</a>
 					</li>
 				</ul>
 			</nav>

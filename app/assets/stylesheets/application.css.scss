@@ -58,6 +58,7 @@ h1, span.project-txt {
     font-weight: 700;
     color: $dkblue;
     font-size: 1rem;
+    // text-transform: uppercase;
 }
 
 li {
@@ -89,7 +90,7 @@ span.project-txt {
 }
 
 p {
-    font-family: "lato",sans-serif;
+      font-family: "lato",sans-serif;
       color: $dkgrey;
       font-weight: light;
       font-size: 0.8rem;
@@ -150,10 +151,12 @@ nav {
     margin-top: 30px;
         img {
         width: 100%;
+        border-radius: 5px;
+        // border: solid 4px #ffffff;
         }
         h2 {
         margin-left: 20px;
-        margin-bottom: 2px;}
+        margin-bottom: 7px;}
     }
 }
 
@@ -220,7 +223,8 @@ section {
         margin-top: 30px;}
     img {
         display: block;
-        margin: 2px auto;}
+        margin: 2px auto;
+        border-radius: 5px;}
     .comment-box {
         padding: 5px;
         width: 97%;

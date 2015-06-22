@@ -16,7 +16,7 @@ var OverallProjectPageComponent = React.createClass({
                                 <a href="#project-form">SUBMIT</a> | 
                             </li>
                             <li>
-                                <a href="#pitch-page">PITCHES</a>
+                                <a href="#pitch-page"> PITCHES</a>
                             </li>
                         </ul>
                     </nav>

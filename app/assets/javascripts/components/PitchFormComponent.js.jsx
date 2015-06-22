@@ -14,7 +14,7 @@ var PitchFormComponent = React.createClass({
 							<a href="#pitch-page"><span>SUBMIT</span></a> | 
 						</li>
 						<li>
-							<a href="#pitch-page">PITCHES</a>
+							<a href="#pitch-page"> PITCHES</a>
 						</li>
 					</ul>
 				</nav>

@@ -15,7 +15,7 @@ var ProjectFormComponent = React.createClass({
 	                        <a href="#"><span>SUBMIT</span></a> | 
 	                    </li>
 	                    <li>
-	                        <a href="#">PROJECTS</a>
+	                        <a href="#"> PROJECTS</a>
 	                    </li>
 	                </ul>
 	            </nav>

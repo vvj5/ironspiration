@@ -15,13 +15,13 @@ var SuccessPageComponent = React.createClass({
 							<a href="#home">SUBMIT</a> | 
 						</li>
 						<li>
-							<a href="#pitch-page">PITCHES</a>
+							<a href="#pitch-page"> PITCHES</a>
 						</li>
 					</ul>
 				</nav>
 
 				<section className="success">
-					<img src="images/check.png" />
+					<img src="http://i.imgur.com/ItubciO.png" />
 					<p>SUCCESSFULLY SUBMITTED!</p>
 				</section>
 			</div>

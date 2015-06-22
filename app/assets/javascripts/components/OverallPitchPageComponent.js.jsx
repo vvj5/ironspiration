@@ -14,10 +14,10 @@ var OverallPitchPageComponent = React.createClass({
 							<a className="login-link" href="#login">LOGIN</a> | 
 						</li>
 						<li>
-							<a href="#pitch-form">SUBMIT</a> | 
+							<a href="#pitch-form"> SUBMIT</a> | 
 						</li>
 						<li>
-							<a href="#pitch-page"><span>PITCHES</span></a>
+							<a href="#pitch-page"><span> PITCHES</span></a>
 						</li>
 					</ul>
 				</nav>
