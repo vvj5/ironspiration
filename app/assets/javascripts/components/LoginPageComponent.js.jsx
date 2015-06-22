@@ -11,9 +11,9 @@ var LoginPageComponent = React.createClass({
 					<section>
 						<div className="grey-rectangle">
 							<input type="text" ref="user" placeholder="USERNAME" />
-							<input type="text" ref="pw" placeholder="PASSWORD" />
+							<input type="password" ref="pw" placeholder="PASSWORD" />
 							<div className="buttons">
-								<a href="#success">
+								<a href="#register">
 									<div className="sign-up button">
 										<p className="signup-text">SIGN UP</p>
 									</div>
@@ -38,16 +38,19 @@ var LoginPageComponent = React.createClass({
 			password: this.refs.pw.getDOMNode().value
 		};
 
-		console.log(userObj);
+		$.get (
+			'http://ironspiration.herokuapp.com/users',
+			testUser
 
-		$.ajax({
-		url: 'http://ironspiration.herokuapp.com/login',
-		type: 'POST',
-		data: userObj,
-		});
+		);
 
-		var userInput = this.refs.user.getDOMNode().value;
-		var passwordInput = this.refs.pw.getDOMNode().value
-
+		function testUser(list) {
+			console.log(list);
+			for(var i=0; i<list.length;i++) {
+				if(userObj.name === list[i].name) {
+					myRouter.navigate("home", {trigger:true})
+				}
+			}
+		}
 	}
 });
