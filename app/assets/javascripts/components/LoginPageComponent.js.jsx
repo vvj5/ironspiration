@@ -46,7 +46,7 @@ var LoginPageComponent = React.createClass({
             return 'Please add password.';
         }
         else {
-        	myRouter.navigate("login", {trigger:true})
+        	myRouter.navigate("home", {trigger:true})
         }
 	}
 });
