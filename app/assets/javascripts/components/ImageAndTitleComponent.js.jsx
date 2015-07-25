@@ -20,14 +20,11 @@ var ImageAndTitleComponent = React.createClass({
       var myId = parseInt(this.props.testPic);
 
       passedInfo = this.state.ImgArray.map(function(testProject) {
-        // console.log(myId, testProject.id);
         if (testProject.id === myId) {
-          // console.log(testProject.id);
           return (
               <div>
                 <h1>{testProject.title}</h1>
                 <img src={testProject.image_link} />
-                <CommentListComponent />
               </div>
           );
         }

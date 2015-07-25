@@ -57,9 +57,9 @@ var ProjectFormComponent = React.createClass({
 	        project_url: this.refs.projectUrl.getDOMNode().value,
 	        likes: 0
     	});
-    	project.save();
-    	ProjectList.add(project);
-    	// console.log(ProjectList);
+    	alert("We are not accepting new project submissions at this time, sorry!");
+    	// project.save();
+    	// ProjectList.add(project);
     }
 });
 

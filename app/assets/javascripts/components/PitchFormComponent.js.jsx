@@ -42,9 +42,9 @@ var PitchFormComponent = React.createClass({
 			title: this.refs.pitchTitle.getDOMNode().value,
 			body: this.refs.pitchBody.getDOMNode().value
 		});
-		console.log(pitch);
-		pitch.save();
-		PitchList.add(pitch);
+		alert("We are not accepting new pitch submissions at this time, sorry!");
+		// pitch.save();
+		// PitchList.add(pitch);
 	}
 
 });

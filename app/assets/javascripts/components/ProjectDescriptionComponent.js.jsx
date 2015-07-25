@@ -20,9 +20,7 @@ var ProjectDescriptionComponent = React.createClass({
       var myId = parseInt(this.props.testDesc);
 
       descInfo = this.state.DescriptionArray.map(function(testDescription) {
-        // console.log(myId, testProject.id);
         if (testDescription.id === myId) {
-          // console.log(testProject.id);
           return (
 			<div className="project-info">
 				<span className="project-txt">DESCRIPTION : </span> <p>{testDescription.body}</p>
