@@ -26,7 +26,7 @@ var HomePageComponent = React.createClass({
 			</div>
 
 			<footer>
-				<p><a href="https://github.com/chaneyz">Zack Chaney</a> | <a href="https://twitter.com/dalywebdev">Rob Daly</a> | <a href="https://github.com/vvj5">Will Sherman</a> | <a href="https://github.com/andreastclair">Andrea St. Clair</a></p>
+				<p><a href="https://github.com/chaneyz">Zack Chaney</a> | <a href="http://www.dalywebdevelopment.com/">Rob Daly</a> | <a href="https://github.com/vvj5">Will Sherman</a> | <a href="https://github.com/andreastclair">Andrea St. Clair</a></p>
 			</footer>
 			
 		</div>

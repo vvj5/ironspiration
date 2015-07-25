@@ -43,6 +43,7 @@ var PitchFormComponent = React.createClass({
 			body: this.refs.pitchBody.getDOMNode().value
 		});
 		alert("We are not accepting new pitch submissions at this time, sorry!");
+		myRouter.navigate("home", {trigger: true});
 		// pitch.save();
 		// PitchList.add(pitch);
 	}

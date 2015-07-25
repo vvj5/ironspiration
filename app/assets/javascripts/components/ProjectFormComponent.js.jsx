@@ -58,13 +58,14 @@ var ProjectFormComponent = React.createClass({
 	        likes: 0
     	});
     	alert("We are not accepting new project submissions at this time, sorry!");
+    	myRouter.navigate("home", {trigger: true});
     	// project.save();
     	// ProjectList.add(project);
     }
 });
 
-function dropPage() {
-    myRouter.navigate("home", {trigger:true})
-}
+// function dropPage() {
+//     myRouter.navigate("home", {trigger:true})
+// }
 
-setTimeout(dropPage, 1000)
+// setTimeout(dropPage, 1000)
